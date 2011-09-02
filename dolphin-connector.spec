@@ -8,7 +8,7 @@ License: GPLv3
 Group: Development/C++
 Source: http://github.com/poetinha/dolphin-connector/tarball/master/poetinha-%{name}-v%{version}-1-%{svn_version}.tar.gz
 URL:	http://github.com/poetinha/dolphin-connector
-BuildRequires: libboost-static-devel, libmysql-devel
+BuildRequires: boost-static-devel, libmysql-devel
 BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 
 %description
@@ -22,18 +22,22 @@ rm -rf %{buildroot}
 %build
 ./autogen.sh
 
-./configure
+./configure --prefix=/usr/
 
 %install
 mkdir -p %{buildroot}/usr/local/lib/
+mkdir -p %{buildroot}/usr/local/include/
 %make
+make install DESTDIR=%{buildroot}
 
-make install DESTDIR=%{buildroot}/usr/local/lib/
+cd include/
+make install DESTDIR=%{buildroot}
 
 
 %files
 %defattr(0755,root,root)
-/usr/local/lib/*
+/usr/lib/*
+/usr/include/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
