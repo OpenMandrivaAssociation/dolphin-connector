@@ -31,7 +31,7 @@ rm -rf %{buildroot}
 %build
 ./autogen.sh
 
-%configure --prefix=/usr/ --disable-static
+./configure --prefix=/usr/ --disable-static
 make %{?_smp_mflags}
 
 %install
