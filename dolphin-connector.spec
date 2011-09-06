@@ -3,7 +3,7 @@
 Name: dolphin-connector
 Summary: Dolphin Connector is a simple MySQL C API wrapper for C++. It is originally designed to be as efficient as is possible
 Version: 1.2
-Release: %mkrel 2
+Release: %mkrel 3
 License: BSD
 Group: Development/C++
 Source: http://github.com/poetinha/dolphin-connector/tarball/master/poetinha-%{name}-v%{version}-1-%{svn_version}.tar.gz
