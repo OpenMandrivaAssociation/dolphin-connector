@@ -52,7 +52,7 @@ rm -f sample/Makefile*
 %files
 %defattr(-,root,root,-)
 %doc ChangeLog LICENSE README TODO
-%{_libdir}libdolphinconn.so.*
+%{_libdir}/libdolphinconn.so.*
 
 %files devel
 %defattr(-,root,root,-)
