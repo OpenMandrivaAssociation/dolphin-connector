@@ -14,7 +14,7 @@ BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 %description
 Dolphin Connector is a simples MySQL C API wrapper for C++, It is originally designed to be as efficient as is possible, and makes no use of exceptions
 
-%package devel
+%package  devel
 Summary: Development files for Dolphin Connector
 Group: Development/C++
 Requires: %{name} = %{version}-%{release}
