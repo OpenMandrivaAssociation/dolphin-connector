@@ -8,7 +8,7 @@ License: BSD
 Group: Development/C++
 Source: http://github.com/poetinha/dolphin-connector/tarball/master/poetinha-%{name}-v%{version}-1-%{svn_version}.tar.gz
 URL:	http://github.com/poetinha/dolphin-connector
-BuildRequires: boost-static-devel, mysql-devel
+BuildRequires: boost-static-devel, mysql-devel, automake
 BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 
 %description
