@@ -31,17 +31,19 @@ rm -rf %{buildroot}
 %build
 ./autogen.sh
 
-./configure --prefix=/usr/ --disable-static
-make %{?_smp_mflags}
+########./configure --prefix=/usr/ --disable-static
+%configure
+%make
 
 %install
 rm -rf %{buildroot}
-make install DESTDIR=%{buildroot}
+%make_install
 
 cd include/
 make install DESTDIR=%{buildroot}
 
 rm -f %{buildroot}%{_libdir}/*.la
+rm -f %{buildroot}%{_libdir}/*.a
 
 rm -f sample/Makefile*
 
