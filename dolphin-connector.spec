@@ -65,3 +65,17 @@ rm -f sample/Makefile*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+
+%changelog
+* Thu Sep 22 2011 Leonardo Coelho <leonardoc@mandriva.com> 1.2-4mdv2012.0
++ Revision: 700988
+- change the package license
+- add devel package
+- changes on spec file
+
+* Tue Sep 06 2011 Leonardo Coelho <leonardoc@mandriva.com> 1.2-1
++ Revision: 698382
+- first mandriva version
+- Created package structure for dolphin-connector.
+
