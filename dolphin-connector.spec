@@ -12,7 +12,8 @@ BuildRequires: boost-static-devel, mysql-devel, automake
 BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 
 %description
-Dolphin Connector is a simples MySQL C API wrapper for C++, It is originally designed to be as efficient as is possible, and makes no use of exceptions
+Dolphin Connector is a simples MySQL C API wrapper for C++, It is originally
+designed to be as efficient as is possible, and makes no use of exceptions
 
 %package  devel
 Summary: Development files for Dolphin Connector
