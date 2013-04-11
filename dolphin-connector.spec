@@ -1,7 +1,7 @@
 %define svn_version g5f75edb
 
 Name: dolphin-connector
-Summary: Simple MySQL C API wrapper for C++.
+Summary: Simple MySQL C API wrapper for C++
 Version: 1.2
 Release: 5
 License: BSD
