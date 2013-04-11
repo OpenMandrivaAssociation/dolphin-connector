@@ -1,15 +1,14 @@
 %define svn_version g5f75edb
 
 Name: dolphin-connector
-Summary: Dolphin Connector is a simple MySQL C API wrapper for C++. It is originally designed to be as efficient as is possible
+Summary: Simple MySQL C API wrapper for C++.
 Version: 1.2
-Release: %mkrel 4
+Release: 5
 License: BSD
 Group: Development/C++
 Source: http://github.com/poetinha/dolphin-connector/tarball/master/poetinha-%{name}-v%{version}-1-%{svn_version}.tar.gz
 URL:	http://github.com/poetinha/dolphin-connector
 BuildRequires: boost-static-devel, mysql-devel, automake
-BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 
 %description
 Dolphin Connector is a simples MySQL C API wrapper for C++, It is originally
@@ -26,7 +25,6 @@ Requires: boost-devel
 Dolphin Connector development package
 
 %prep
-rm -rf %{buildroot}
 %setup -q -n poetinha-%{name}-5f75edb 
 
 %build
@@ -37,7 +35,6 @@ rm -rf %{buildroot}
 %make
 
 %install
-rm -rf %{buildroot}
 %make_install
 
 cd include/
@@ -63,9 +60,6 @@ rm -f sample/Makefile*
 %{_includedir}/dolphinconn
 %{_libdir}/*.so
 
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
